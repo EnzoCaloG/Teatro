@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe Web - IF</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Estilos personalizados */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand img {
+            max-height: 40px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+            color: #4a148c;
+        }
+
+        .text-custom-purple {
+            color: #4a148c;
+        }
+
+        .btn-custom-purple {
+            background-color: #4a148c;
+            border-color: #4a148c;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom-purple:hover {
+            background-color: #6a1b9a;
+            border-color: #6a1b9a;
+        }
+
+        .header-banner {
+            height: 350px;
+            background-image: url('https://images.pexels.com/photos/1036329/pexels-photo-1036329.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            position: relative;
+        }
+
+        .header-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .header-banner h1 {
+            z-index: 1;
+            color: white;
+            font-size: 3.5rem;
+            text-align: center;
+        }
+
+        .process-section {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .process-section h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .list-group-item {
+            border: none;
+            padding-left: 0;
+        }
+
+        .list-group-item i {
+            width: 30px;
+            text-align: center;
+        }
+
+        /* Estilos para a nova seção de perfis */
+        .profile-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-card img {
+            width: 150px;
+            /* Tamanho da imagem redonda */
+            height: 150px;
+            border-radius: 50%;
+            /* Faz a imagem ficar redonda */
+            object-fit: cover;
+            border: 4px solid #4a148c;
+            margin-bottom: 15px;
+        }
+
+        .profile-card h5 {
+            margin-bottom: 5px;
+            color: #4a148c;
+        }
+
+        .profile-card p {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .footer-github {
+            color: white;
+            /* Cor do link no footer para ser visível */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer-github:hover {
+            color: #d1b1e9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://integra.ifsp.edu.br/img/logos/ifsp/logo-instituto-horizontal-branco.png"
+                    alt="Logo de Teatro">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html"><i class="fas fa-info-circle me-1"></i> Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#pecas"><i class="fas fa-theater-masks me-1"></i> Peças</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="roteiro.html"><i class="fas fa-user-friends me-1"></i> Roteiro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cenarioAndFigurino.html"><i class="fas fa-camera-retro me-1"></i>
+                            Cenário e Figurino</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sonoplastia.html"><i class="fas fa-code me-1"></i> Sonoplastia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="filmagem.html"><i class="fas fa-headphones me-1"></i> Filmagem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="elenco.html"><i class="fas fa-palette me-1"></i> Elenco</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="equipeWeb.html"><i
+                                class="fas fa-pen-nib me-1"></i> Equipe Web</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato"><i class="fas fa-envelope me-1"></i> Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-banner">
+        <h1>A Equipe Web: Como a Mágica Acontece na Internet</h1>
+    </div>
+
+    <main class="container my-5">
+        <section class="text-center mb-5">
+            <h2 class="text-custom-purple display-6 fw-bold">Nossa Missão: Dar Vida ao Projeto no Mundo Digital</h2>
+            <p class="lead">Nossa equipe web é como a equipe de bastidores de uma peça de teatro. A gente trabalha nos
+                detalhes para que tudo funcione perfeitamente. Juntamos ideias criativas com o conhecimento de
+                programação para levar a arte do nosso projeto até a sua tela, de forma simples e bonita.</p>
+        </section>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+
+                <div class="process-section">
+                    <h3 class="text-custom-purple">O Programador: Quem Transforma a Ideia em Realidade</h3>
+                    <p>
+                        Pense no programador como o responsável por construir o palco digital. Ele usa códigos para dar
+                        vida às ideias, garantindo que o site:
+                    </p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <i class="fas fa-laptop-code text-custom-purple me-2"></i>
+                            <strong>Funcione em Qualquer Aparelho:</strong> O site se ajusta sozinho no celular, tablet
+                            ou computador. Assim, você sempre terá uma boa experiência.
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-cogs text-custom-purple me-2"></i>
+                            <strong>Seja Rápido e Seguro:</strong> Ele cuida para que o site carregue rapidinho e
+                            protege os dados, para que você possa navegar sem preocupações.
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-code-branch text-custom-purple me-2"></i>
+                            <strong>Esteja Organizado por Dentro:</strong> O código é limpo e arrumado. Isso facilita na
+                            hora de fazer mudanças e adicionar coisas novas no futuro, mantendo tudo em ordem.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="process-section">
+                    <h3 class="text-custom-purple">As Mentes Criativas: Quem Escreve a História</h3>
+                    <p>
+                        Assim como o roteirista de uma peça, essa equipe cria a "história" do site. Eles pensam em cada
+                        detalhe para que a sua experiência seja a melhor possível:
+                    </p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <i class="fas fa-pen-nib text-custom-purple me-2"></i>
+                            <strong>Escrevem os Textos:</strong> Criam todo o conteúdo, desde os títulos que chamam a
+                            atenção até as descrições das peças, para que você se sinta parte do projeto.
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-lightbulb text-custom-purple me-2"></i>
+                            <strong>Têm as Ideias Principais:</strong> Eles definem a estrutura das páginas e o tipo de
+                            informação que o site precisa ter, garantindo que tudo faça sentido para o público.
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-palette text-custom-purple me-2"></i>
+                            <strong>Escolhem as Cores e o Estilo:</strong> Decidem as cores, as fotos e o visual do site
+                            para que ele combine com o tema do nosso projeto de teatro, transmitindo a emoção da arte.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="process-section">
+                    <h3 class="text-custom-purple">Juntos Somos Mais Fortes: A Nossa Colaboração</h3>
+                    <p>
+                        A parte mais importante é que todas essas pessoas trabalham juntas, como um verdadeiro time de
+                        teatro.
+                    </p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <i class="fas fa-handshake text-custom-purple me-2"></i>
+                            <strong>Conversa e Trabalho em Conjunto:</strong> O programador e a equipe criativa se
+                            reúnem para trocar ideias. Eles discutem o que funciona, o que pode melhorar e resolvem os
+                            problemas juntos, garantindo que a tecnologia e a criatividade se complementem.
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-users-cog text-custom-purple me-2"></i>
+                            <strong>Crescendo Juntos:</strong> O site é um projeto vivo. Ele muda e melhora com o tempo,
+                            e isso só é possível porque nossa equipe se apoia e continua aprendendo, sempre buscando a
+                            melhor experiência para você.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <section id="participantes-web" class="container my-5">
+        <h2 class="text-center text-custom-purple mb-5">Conheça a Equipe Web</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="profile-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3McCSKzC7m88yNdYhUV2d4oCwKgslrNCM-A&s"
+                        alt="Foto do integrante" class="img-fluid">
+                    <h5>Nome</h5>
+                    <p>Função: Programador(a)</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="profile-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3McCSKzC7m88yNdYhUV2d4oCwKgslrNCM-A&s"
+                        alt="Foto do integrante" class="img-fluid">
+                    <h5>Nome</h5>
+                    <p>Função: Designer Web</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="profile-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3McCSKzC7m88yNdYhUV2d4oCwKgslrNCM-A&s"
+                        alt="Foto do integrante" class="img-fluid">
+                    <h5>Nome</h5>
+                    <p>Função: Criador de Conteúdo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="contato" class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>Siga-nos nas redes sociais e entre em contato para mais informações.</p>
+            <div class="d-flex justify-content-center gap-3 mb-3">
+                <a href="https://www.instagram.com/" class="text-white"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.tiktok.com/" class="text-white"><i class="fa-brands fa-tiktok fa-2x"></i></a>
+                <a href="https://www.youtube.com/" class="text-white"><i class="fab fa-youtube fa-2x"></i></a>
+            </div>
+            <p>Email: <a href="mailto:contato@teatroif.com"
+                    class="text-white text-decoration-none">contato@teatroif.com</a></p>
+            <p>&copy; 2025 Projeto de Teatro IF. Todos os direitos reservados.</p>
+            <p class="mt-2">
+                <a href="https://github.com/EnzoCaloG" target="_blank" class="footer-github">
+                    <i class="fab fa-github me-1"></i> <strong>Desenvolvido por Enzo Caló</strong>
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

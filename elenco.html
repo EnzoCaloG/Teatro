@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elenco - Teatro IF</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Estilos personalizados */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand img {
+            max-height: 40px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+            color: #4a148c;
+        }
+
+        .text-custom-purple {
+            color: #4a148c;
+        }
+
+        .btn-custom-purple {
+            background-color: #4a148c;
+            border-color: #4a148c;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom-purple:hover {
+            background-color: #6a1b9a;
+            border-color: #6a1b9a;
+        }
+
+        .card {
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .header-banner {
+            height: 350px;
+            background-image: url('https://images.pexels.com/photos/1036329/pexels-photo-1036329.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            position: relative;
+        }
+
+        .header-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .header-banner h1 {
+            z-index: 1;
+            color: white;
+            font-size: 3.5rem;
+            text-align: center;
+        }
+
+        .process-step {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .process-step img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .process-step .step-content {
+            padding: 0px 30px 30px 30px;
+        }
+
+        .process-step .step-icon {
+            font-size: 2.5rem;
+            color: #8e24aa;
+            margin-bottom: 15px;
+        }
+
+        .process-step h5 {
+            font-size: 1.5rem;
+            color: #4a148c;
+            margin-bottom: 10px;
+        }
+
+        .process-step p {
+            font-size: 0.95rem;
+        }
+
+        .actor-img-container {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            border: 4px solid #4a148c;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .actor-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .actor-card-title {
+            color: #4a148c;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://integra.ifsp.edu.br/img/logos/ifsp/logo-instituto-horizontal-branco.png"
+                    alt="Logo de Teatro">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html"><i class="fas fa-info-circle me-1"></i> Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#pecas"><i class="fas fa-theater-masks me-1"></i> Peças</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="roteiro.html"><i class="fas fa-user-friends me-1"></i> Roteiro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cenarioAndFigurino.html"><i class="fas fa-camera-retro me-1"></i>
+                            Cenário e Figurino</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sonoplastia.html"><i class="fas fa-code me-1"></i> Sonoplastia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="filmagem.html"><i class="fas fa-headphones me-1"></i> Filmagem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="elenco.html"><i class="fas fa-palette me-1"></i> Elenco</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="equipeWeb.html"><i
+                                class="fas fa-pen-nib me-1"></i> Equipe Web</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato"><i class="fas fa-envelope me-1"></i> Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-banner">
+        <h1>O Elenco: A Alma da Peça</h1>
+    </div>
+
+    <main class="container my-5">
+        <div class="text-center">
+            <p class="lead mt-3">
+                No universo do teatro, o elenco é muito mais que um grupo de atores; são os alquimistas que transformam
+                palavras em emoções, gestos em narrativas e um roteiro em uma experiência inesquecível. Descubra a
+                jornada por trás das cortinas.
+            </p>
+        </div>
+
+        <section id="processo" class="my-5 py-4">
+            <h2 class="text-center text-custom-purple mb-5">A Jornada do Personagem: Do Papel ao Palco</h2>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+                <div class="col">
+                    <div class="process-step h-100">
+                        <img src="https://www.sp.senac.br/documents/20125/84168706/17283_01-08-2022.webp/38e49aa5-2b1c-b789-f462-ce02aef639d3?version=1.0&t=1716212675370null&download=true"
+                            alt="Pessoas lendo roteiro de teatro">
+                        <div class="step-content">
+                            <div class="step-icon"><i class="fas fa-book-open"></i></div>
+                            <h5>1. Mergulho no Roteiro</h5>
+                            <p>Tudo começa com a imersão profunda no texto. Cada ator explora as nuances das falas, as
+                                intenções do autor e a totalidade da obra para desvendar a alma de seu personagem.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="process-step h-100">
+                        <img src="https://thumbs.dreamstime.com/b/atores-profissionais-lendo-seus-scripts-durante-o-ensaio-no-teatro-roteiros-228112482.jpg"
+                            alt="Ator pensando e estudando um papel">
+                        <div class="step-content">
+                            <div class="step-icon"><i class="fas fa-hat-wizard"></i></div>
+                            <h5>2. A Magia da Criação</h5>
+                            <p>O elenco se dedica a moldar a essência do personagem: seus trejeitos, o timbre da voz e
+                                os gestos que o definem. É um trabalho artesanal, onde a imaginação toma as rédeas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="process-step h-100">
+                        <img src="https://thumbs.dreamstime.com/b/atores-profissionais-ensaiando-em-palco-no-teatro-255918910.jpg"
+                            alt="Grupo de atores ensaiando em um palco">
+                        <div class="step-content">
+                            <div class="step-icon"><i class="fas fa-users-line"></i></div>
+                            <h5>3. Ensaios de Mesa e Marcação</h5>
+                            <p>Os primeiros ensaios, onde as palavras ganham voz. Em seguida, a "marcação" coreografa os
+                                movimentos no palco, definindo a interação entre os personagens.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="process-step h-100">
+                        <img src="https://thumbs.dreamstime.com/b/atores-que-ensaiam-uma-cena-em-um-teatro-135514781.jpg"
+                            alt="Ator expressando emoção em close-up">
+                        <div class="step-content">
+                            <div class="step-icon"><i class="fas fa-lightbulb"></i></div>
+                            <h5>4. Lapidação e Expressão</h5>
+                            <p>O elenco mergulha nos ensaios, aprimorando cada fala e cada olhar. O objetivo é que a
+                                interpretação seja fluida, orgânica e que as emoções ressoem de forma autêntica.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="process-step h-100">
+                        <img src="https://escsmagazine.escs.ipl.pt/wp-content/uploads/2019/06/image2-4.jpg"
+                            alt="Palco de teatro com luzes e cortinas">
+                        <div class="step-content">
+                            <div class="step-icon"><i class="fas fa-sparkles"></i></div>
+                            <h5>5. A Magia se Completa</h5>
+                            <p>O palco ganha vida com cenário, figurino, iluminação e trilha sonora. O elenco integra
+                                sua performance aos elementos técnicos para que a obra brilhe em sua totalidade.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="process-step h-100">
+                        <img src="https://www.eparaguacu.sp.gov.br/admin/globalarq/noticia/noticia/651_366/df9ef511a6a4168055647f7a60a64e25.jpeg"
+                            alt="Audiência aplaudindo em um teatro">
+                        <div class="step-content">
+                            <div class="step-icon"><i class="fas fa-star"></i></div>
+                            <h5>6. As Luzes se Acendem</h5>
+                            <p>O coração acelera, a cortina se abre. É o momento mágico onde meses de trabalho culminam
+                                na conexão com a plateia, dando um novo sopro de vida à história.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container mt-5">
+            <h2 class="text-center text-custom-purple mb-4">Conheça Nossos Talentos</h2>
+            <p class="text-center mb-5 lead">
+                Nosso elenco é formado por alunos dedicados e apaixonados pela arte. Veja alguns dos rostos que trazem
+                as histórias à vida:
+            </p>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 text-center shadow-sm">
+                        <div class="actor-img-container">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKljN3a_Pjo592RuIL8gF8WH7sAmC8uizguQ&s"
+                                alt="Foto do integrante">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="actor-card-title">Nome</h5>
+                            <p class="card-text">Personagem: Dr. Simão Bacamarte</p>
+                            <p class="card-text"><small class="text-muted">"Cada papel é uma nova descoberta de mim
+                                    mesmo."</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 text-center shadow-sm">
+                        <div class="actor-img-container">
+                            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQDxUPEA8QDw8PDxAQFRAPDxAPEA8QFRYWFhUVFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGi0lICYtNS0rLSsrKy0vMC8tKy0tLS8rKy0tLSstKy0rLS0tLSstLS0uLS4tLS0tLS0tLS0tLf/AABEIAOUA3AMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAABAAIDBAUGB//EADwQAAEEAAQDBwEGBAYCAwAAAAEAAgMRBBIhMQUGQRMiUWFxgZGhMlKxwdHwBxQjQmJygpLh8YOyFjNj/8QAGwEAAQUBAQAAAAAAAAAAAAAAAQACAwQFBgf/xAAtEQACAgEDAwMCBQUAAAAAAAAAAQIDEQQSIQUxQSJRgRMyI2FxsfAUNEKRof/aAAwDAQACEQMRAD8A9ZQSRVkxgJJJJCEgigiASCSSQAJJJJAAmlOTU4YwIFEoFIawFNKJQRGMBQSKBRGsSCKCI1gKaUSgURjGlAooFEYxpQRKBRGMCCJQRGm0UUElWNoSSSSQBIIoJCAkkkUgAQRQRGgQKJKaURrAUCVgcR5uw0Mhj77y005zACxp3IzE0a6rExfPUY0izF1uH9YxxsIG2p+da8PQZXuLZN9kdwSm2uEj/iNHVOY27FuaRlo7U0uzHwvp57LT4bzthZaDiYiXZe93mX0tw2vzpFNe4yVc1y4s6hBRslDhYIIPUG0cyeQ5HIIWhaQ3IUELSRGsBQKKaURrAgUU0ojGAoIoWiMNxJBJVTbEkkkiACSSSQAJFJBIAkCkgUQMBWfxyUsge8SNiyjV7w5wAOmzdb10rrSvlcLzZzLE9roGyCMA958ltLq3a0fO/siMxl4OC4xxV79InXE3MW1UbspOYk2euh0vy2pc7icY524GYno2h+9FNxbGmR7navJNh77sjxN9PUrLJaT3ia0G2512HgqUpNs3qa1GKwsErsSK1s34t1ry+EYsU7o0junanfI+FNgMJLMcsEeeu6SRY+uy1P8A4hj3DMcoqyG56+NFE7Iruy0qpy5SHcB5pnwpHZvcBoeyH2N7oj0teucu8yR4tgIGV2oq7DqAJI+dl4Vj+HTwOyTCidfvD109Focv8Wdhn9qxrSayiydAd9lapuXl8GRrtC5LdBYl7e57/mSzLk+WOamYkZD3X0KF3dDXX1XSCRXUk+Uc9KTi9slhlm0rUIenByOBbh5KCFpWkLIigkkURrAmolBIYzcQSSVY2xJJJJAEgkkkISCKCQAJpTimlEaytxCfs4nPokNFkCya9tV4xzfIe0dI8tyZWhjAQCbcSS5t3Wn0XrvH8X2UJdYbZok7ZaJdZ6CgdV4jzXj+0dlb2Yjjusgb1JIo1btB+HSk2z7B+ly71g5vFztO5FWdG3+/lanKfLkuPkFf04Wavkc0f7W/4qVbl7gxx2KEIBDaLnmvstHj70vdOGcNjw2HEcTWta0UB1J6k+ZWZbZt4Xc6mijf6n2MThEWHZFWBfBOyLR0TBTyOtGz3vUaroY4mOjDmjuuFixR9CFjycCj/mmYxr3RPaCHMb9lw1selm623O5K0o+J9pmZAztCy7J7rQegtVmosupyXcwuY+FRSsLXixr5UvJMXh+xmdFegLqPl0ter8T4i53ckjfBJr3Hj7Xm12zgvNeY2jtrv1qj+9lJp21Jog1aUoqXko4DEvjeJGuLXA2CCvUuVObP5gCOTSYD2eB1H6LyYO1IHjfgd1bwWJcx4e2w+M2NlpVWuD/I57XaGOoh7SXZ/wA8HvbJlM165jgnFRPCyQf3DUfdcNwtqGe1qbcrKOMVzjJwlw0aAcnWqzJFIHJmCyp5JbStMtG0h24cUELStIGTcSQSVU2xJJJJCEkkgkASCKBRAAoFJBxrfRIacrzrgJ5WW0NfEGlpjLnttx0Drbqemi8t5nhfh8vaQGF74yWghoIJJGckaZqP2R6r2/icjOxeXW5mUg5DrRHiNl4hxfDSyvydm9ta5prGRoJoWbJaOlnUAdAlLlcCpahZmXbydT/CzhgjwZnI/qYh5Ou4YwlrR6XZ91v8OxTJ5JQP6jsPJkdbmnKaBsM/tGu5Hum8pMazAwNabHYtNnc3qT9VE7BQ4eQzMLYpi5zhM1o7QOd9oG/tNNbLDklKbyd1Qn9OO32JuM8RDGdkA9xfmHa9ymXdB1VoNtlQwOAc7B0xzo5Ht7Rj2ukaM3TMGkWFQxOMfLLlbCe0vv8AZxvEDh0cwnRu+rb06Ld4nxhsUTW0A5ooAeKjb2skcVJHG4vHYr+WkhxVulhc0tlod7UUfi1w2MxJc8v3Gu5Iv3WvzZzC55cxp1d4ePiuY7TSqGg+u6t0x/yM3UTWduR8UmtEajrvfVWmO+HX16/sqjE3SzdE3v8AirUJ29Qb8FOVUdxyJxEAOhcdS7M3XTbUDw2XbRS0vNuWYSMQDRAN5TsCRfz1XoEb1r6STdaycF12mMNU3Dzz8mvDPauMesWN6vQSqeUTPpvfZmiHJwKrMepQ5RYL0Z5JbSTLRtDA/cb6SCSqG6JJJBEAkkkkhCKr4rFMjFuPoBqSppHgAuOwBPsNVxuKxxe4uO7j8DwUF9301wXdFpP6iXPZG4/j0Y3Y6vUI8NkdIHPfqSaro0VsB7rl8VKANT1WrwfjEcbSHms5oH+0adT0WfLUTmuTdq0VVMsxXJuStaBdDu7aALCx/EMOGPfL2TpWuAaHhriHbigrGJ4kJcwhlaWtABrUai155Lw90mJfIS4nNQa27IGnt6qvnngvqCxyjoOHcxaudOGhrjplGUAqnj+MxSd0vtvg2nE/Cqsww7JzXdZA0D0Gv4rAxvD5Gv8A6dkeF7JjazgfueMnUYTi8cQ7rQyx9o0X+w6LleauZGUQ094ir615LK4pinxNOc0fAHUrlac9xc42SflWKaFLllS/UuPpXc0HuYQSHCRzjQIFAeJ1CrNHTw3PiUo20Kqr2vxXTcL5Kmkbnle2AOFhpYXvrxLbAHzasuUYLllNRlY+Ec8NkYrB/f5rV4vwCTC/3CSN2ge0Zad5joqOHit2t9BtsnRe7sR2fh/cdZy7C/u2e4whw11sjYeWq62F657hmjAPJbMDls0rbHBwHUJu2xyZqRuViN6oxOVlhVlGPJYZowyqyxyzI3q3E9MlEsVXeGXA5OzKBrk+1HgtqZ0iSFpKmdFkKRKbaSQshtC0kLRBkixbS6N7RuWOHuQvPHT16r0e15vzHh+zneBtmJHodR+Kp6uOUma3SbMSlEz8Xj66WosHjnP7lZTsL2IVTETsY0vkIa0fJ8gOpVXgTJ8bM54Bjw8dUwaWTsXEbmrNbDT1VKEEbVkzq+GYLEguEDGPDwM1nKGkXre3VF7XYUOa+SN+IfsxmwJ016la0bnwYWRwJDo4ZHA+DgNPyXIYRwz9oWjO42XV3iTubUd0VDsTUWOUWmXSyzExx2c/MehcRd/NpvF2FjD2TS9xNX+JpaEcTX0Sr8bGt8FU8lrxg8zl4DNK/M9rnC9dCK+V3XB/4WRSZZcSHMaWA9kwgOqr7zht6D56K8+QE9F6QHV7V8K9pfW3nwZ+rWxLHk8gw/AsM1/adhG2qytygiNo+zvu7zOvotrF4lmGiDnRCR0g2PTw9EMZAY8U+IjuiQV/lJtv0IS59wQETHsJD2d41pY/evsVFJPOZFmpx4UShPgYMXhHF7aLmn7J2IOhHouBZwgwdx4IfeYHpXQjxBXovDHhmAY+bRzw86DQgOIB+Fz/ABoCRjZB/awUfEE7fmrGjs2z2vszN6xp3Ohzg8Nc/qUMKVrYcrKwwWnh10EDzvUGjEVaYVTiVpisIy7EWGlTRuVdqlaU4hzhlxj1MHKnG5TgqNotV2cHVJIJKgdXkKSCFpCyG0k20rSBkRK4/nHBZ5BqW5mDVu+lj9F1xKxeYI7yO8CW/Iv8lX1abqeC90uxLVRT88HnjuVw52Zxc7wDiXH11Xo/LnL7cPh2ty0539R2nV2w9hSHBeH9q8Ei2Nonz8B7rrhEKWfpYyfqZ0OrlFPbH5Ob4jwvtIJIhoZInsB/xEGl5fkczcEOaaIO4cNCCvcJIQsTi3LcGIJc9pa87vjIa4+oIIPrSkvpc+wzT3qGUzgOFTBwPiFZmmXSQckwMstmn16Ex1/6qzDypAN3Sv8AIuaB9Aqb0tjZdWsrSOb4Fg3TztaAcgIc89GsGps+J2XoT5K1O16/5Xf8pmEwjI25I2NY3eh1PiT1PmUZmWCPEUrtNX04lDUX/Vlnwea8/wCIdBi4pg4hjg6GTXQPbqx/wfgLZ4xlnwkbjKyIOyW97gAB1rxO4pR868J7eItGrtHNv77dvkWPdcThOKMZgJMHMDJ37ja9t9n5X0oqO6PJZ0tkUvU+xqc2cZic1uGgc0sDWs7pvLGN7/BYMnEHSgg/Ztob0to8vDZZsYrT+37tClbhbas6fRyjNSkYvUesVzqlCvzx8FvDhaMAVOBqvwhbETibmW4lZYq8asMUyM+ZM1SBRNUgTyBkzHKUOVcFPtLAoywdjaSCCzTs8jrQQtK0gZDaFoIFEGROKglwjZqjc4tBcDYFmx+uylJTYpMr2nwcEJRzFoVdjhZGXszbw2GZGwMY3KB7+5PUqwFFeiGdUksHSZb5Y9yiKDnFNRENcEWhIoJBJVDLsg+SlTxGJQEZ/FQDovL+c8E2LEBzT/8Aa0vc3wN1m9/xBXpOJeXFcBz7ODLHGKtjHOPiC46D4anVxTkslXV2ShU8PvwcxGNVfgaqcQ1WjAFficxcy3CFdiCqxBW4lPEzbGWY1OxQxqdqlRTmSNUgUYTwnEDHhG00IojTsrQtNtK1nHYbh1oWhaFpCyOtAlNtC0RuQuKhkKeSopCiiObNzBS5mNPl9RoplncIkthb9130P7K0FRsWJNHS6WzfVGX5BSpIFJMLA0pjlIUNhaQiriCGtsrJklzA+fVaHZdqS932G7AdVFNZ0bHptqkExnscNiCD4rzrnGLLizqTmjY7U30y79fsr1KbCv6lrPLdee/xCga2eKqLjG6yAASAdL8tT9VJT9xR16zVk5uELRgCowBaMAV+JzNzLUQVqNQRhWWKZGdYydimaoWKVqkRVkShPCjCeESFjwimhFEaddaVptpWqB1WR1oWm2laOBbh1oEptoEpYGuQXFQyFPJUMhTkiOcizwiapcv3h9Rr+q3lyDZsj2v+64H26/RdXG+wqupjhpmz0a7dXKHs/wDjH2laa4/vzQLlWNkfaZJq0jxTJ5msGd5DGAElziGtaALJJO2y5bHfxF4ZGcv8z2h//Nj3N/3VlPsURHWVQyjRZ2LlefsHIzbMdXOPkFwfF/4vQMBbh8PJK/SjK5sUdeOhJPpQ9lwXG+fcfitHTuiZ0jwoMQH+u8x/3I4Bk9nxWOw0DwyfEME7mlwiLw6ZwAskM32BXl3OfPWFxOVkGGeWtIPby1G8eNAXofArz10zg8va54ebt2fvEuvMSRrqL69VWyG0VwyOaUo4fY7/AAxsA7WAflaMKyeGTZmC6zBrfs3RBGhF9P0K1oVoQ7HIahYk0XIlajVWJW2KdGbYTNUjVG1StT0VpDwnBNCcESNjgimoojTq7StMtK1TwdJuHWhabaBKWBu4eSmkpuZAlHAHIJKjeUS5RvKKRFKRVxCqY3nNmBY1szZHBwc1j425qIGgcTp/0rcxXG8zuE2HxBe4shh/ptAs9pOMpt3kCcoG12T0o2wUoYYNBfOrVKUXx2fzx+5yo584oITCcdKWbZqjMp/8lZ/e781Zg5/kdw2fh+JdLI58dQz5gZGGwSyQ3ZbpvuNd1yhjbewv2CcWCtvqfyWadqnkhbJm1JDneJJPwrnDcN2sgY+VsUe7nvboG2NgdzqOo89LKjhiPkB5tcfzQncBIGihmYQNgC69r6Xf4IMcu5axmJwrJC2CF8kQ07WSVzHy/wCIBoAa29tLrw6Z0zxdhtA6gF2YjyJ0tWcPwfEOkEPZODqGrhTAD/dn2y+ar8RgDZOzBEvZ6F8XfY4+TtiEEOZD2n/Qy/gLSv2/P0RZEfAN+pUuQD490RrNXg/E8uVsmmUUHdCzwPmNx7hddCV5y7UUfRdzwTEZ4GO65Q0+rdD+CtUSzwYHVNOopTRsxFW2FUoyrUZVxHO2ItNUjVEwqVqkRVkPCcE0JyJGxwSQCKQ06a0LTULVY3Nw60C5MtAlHAxyHZkC5MJQJRwMcxxco3OSLlGSikRymRylecc8TOjcMOB3XyyYjfR2agL8w7tPkL0OS15pz7f85qdBCyh5d787Tb+IE/SfVqsP2yc85rTvRG1nVQnDN6A+xd+qF28DoNVI596DQDcrOO1XAyOMNOhO3W/1VTF61fR5HyrYeLobKpitn+RafoE1j0WsoADReU3bTeUn028U9/7pVxLbQfCv0SMvmiIc8KO9fYIl/VRh4BKQhOPX2XR8oz918d7ODgPI6H8AuZJs+q0uXZ8uIb4Pth9/+QE+t4kiprq99Ml8/wCjvoirUZVCFyuRFaMTjbEXGFTNKrxlTtKkRTkiUJwTAnWnETHpJqKQ06DMlmUOdNMih2mi7SZz0wvUJkTDL5pyiQu4nzIFygMiaZEdpG7ifOo3SFQlyaXJyiRO5j3G155/EOYfzDRQtkLdepLnOoe1LvyV5xz4wuxneoNbFGbG5br+dqHU/YafROdVl+zOXqh5uP0Ucj77rf8AsoPcXu7ooDQHyVmGENF7lZh3KI3sygDqSL8gosQO84feYPzCdjH1Xjqmzut7T4sP7+qDHIqRSEtpOtQsOpHmQpGlAdge06ondRx7+ic02SURElap+HkySNd91zXfB1TGeKa7RHIySysHo8L+qvQuWJwuW4mHxY38FrQuWhBnFXww2jQjKsMKqROVhhUyM+aJwU8KJpUgTyBoeimhJEaalphckkgh0mNtIFJJOIgEplopJDWwEoIpJAGkrzrn7XFZemRnxR/VJJV9V9htdB/uvhmC1oAUL3JJLNO4Rnzmz7pz3ax+jh8UkkmEiKbvtH/MU8JJIDgxHQlOLq0SSRAFgtK0EkgM7LgDv6DP9Q+pW7AUklfr7I5HWL8SX6svRFWoykkrCMmwlaVIEkk9FdjgnJJJww//2Q=="
+                                alt="Foto do integrante">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="actor-card-title">Nome</h5>
+                            <p class="card-text">Personagem: D. Evarista</p>
+                            <p class="card-text"><small class="text-muted">"A emoção do palco é o que me move."</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 text-center shadow-sm">
+                        <div class="actor-img-container">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn2M4heYbAE5Ms0CsJgEHzZt21-ryOzmW6Sg&s"
+                                alt="Foto do integrante">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="actor-card-title">Nome</h5>
+                            <p class="card-text">Personagem: Porfírio</p>
+                            <p class="card-text"><small class="text-muted">"Explorar diferentes vidas é a essência do
+                                    teatro."</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 text-center shadow-sm">
+                        <div class="actor-img-container">
+                            <img src="https://s46920.pcdn.co/wp-content/uploads/2020/01/gesta%CC%83o-de-pessoas-.jpg.optimal.jpg"
+                                alt="Foto do integrante">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="actor-card-title">Nome</h5>
+                            <p class="card-text">Personagem: Crispiniana</p>
+                            <p class="card-text"><small class="text-muted">"O palco é o meu lugar de
+                                    transformação."</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 text-center shadow-sm">
+                        <div class="actor-img-container">
+                            <img src="data:image/jpeg;base64,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"
+                                alt="Foto do integrante">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="actor-card-title">Nome</h5>
+                            <p class="card-text">Personagem: Quincas Borba</p>
+                            <p class="card-text"><small class="text-muted">"A arte é o espelho da alma."</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 text-center shadow-sm">
+                        <div class="actor-img-container">
+                            <img src="data:image/jpeg;base64,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"
+                                alt="Foto do integrante">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="actor-card-title">Nome</h5>
+                            <p class="card-text">Personagem: Sofia</p>
+                            <p class="card-text"><small class="text-muted">"Dar vida a uma história é a minha
+                                    paixão."</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato" class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>Siga-nos nas redes sociais e entre em contato para mais informações.</p>
+            <div class="d-flex justify-content-center gap-3 mb-3">
+                <a href="https://www.instagram.com/" class="text-white"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.tiktok.com/" class="text-white"><i class="fa-brands fa-tiktok fa-2x"></i></a>
+                <a href="https://www.youtube.com/" class="text-white"><i class="fab fa-youtube fa-2x"></i></a>
+            </div>
+            <p>Email: <a href="mailto:contato@teatroif.com"
+                    class="text-white text-decoration-none">contato@teatroif.com</a></p>
+            <p>&copy; 2025 Projeto de Teatro IF. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

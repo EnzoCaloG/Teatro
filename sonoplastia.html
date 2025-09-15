@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonoplastia - Teatro IF</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand img {
+            max-height: 40px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+            color: #4a148c;
+        }
+
+        .text-custom-purple {
+            color: #4a148c;
+        }
+
+        .btn-custom-purple {
+            background-color: #4a148c;
+            border-color: #4a148c;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom-purple:hover {
+            background-color: #6a1b9a;
+            border-color: #6a1b9a;
+        }
+
+        .header-banner {
+            height: 350px;
+            background-image: url('https://images.pexels.com/photos/1036329/pexels-photo-1036329.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            position: relative;
+        }
+
+        .header-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .header-banner h1 {
+            z-index: 1;
+            color: white;
+            font-size: 3.5rem;
+            text-align: center;
+        }
+
+        .content-section {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .content-section h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .list-group-item {
+            border: none;
+            padding-left: 0;
+        }
+
+        .list-group-item i {
+            width: 30px;
+            text-align: center;
+        }
+
+        .team-member-card {
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .team-member-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #6a1b9a;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-divider {
+            border-top: 3px solid #6a1b9a;
+            width: 80%;
+            margin: 60px auto;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://integra.ifsp.edu.br/img/logos/ifsp/logo-instituto-horizontal-branco.png"
+                    alt="Logo de Teatro">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html"><i class="fas fa-info-circle me-1"></i> Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#pecas"><i class="fas fa-theater-masks me-1"></i> Peças</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="roteiro.html"><i class="fas fa-user-friends me-1"></i> Roteiro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cenarioAndFigurino.html"><i class="fas fa-camera-retro me-1"></i>
+                            Cenário e Figurino</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="sonoplastia.html"><i class="fas fa-code me-1"></i>
+                            Sonoplastia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="filmagem.html"><i class="fas fa-headphones me-1"></i> Filmagem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="elenco.html"><i class="fas fa-palette me-1"></i> Elenco</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="equipeWeb.html"><i
+                                class="fas fa-pen-nib me-1"></i> Equipe Web</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato"><i class="fas fa-envelope me-1"></i> Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-banner">
+        <h1>A Música Invisível do Espetáculo</h1>
+    </div>
+
+    <main class="container my-5">
+        <section class="text-center mb-5">
+            <h2 class="text-custom-purple display-6 fw-bold">Sonoplastia: A Arte de Narrar com Som</h2>
+            <p class="lead">No mundo do teatro, enquanto os atores dão voz aos personagens, a sonoplastia dá voz ao
+                ambiente. É a arte e a técnica de criar e operar todo o universo sonoro de uma peça, transformando o
+                silêncio em emoção e a cena em realidade.</p>
+        </section>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+
+                <div class="content-section">
+                    <h3 class="text-custom-purple">O Que Faz a Sonoplastia?</h3>
+                    <p>
+                        A sonoplastia vai muito além de colocar uma música no início ou no fim. Ela é a responsável por:
+                    </p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <i class="fas fa-volume-up text-custom-purple me-2"></i>
+                            <strong>Criar Atmosfera:</strong> Seja o som de uma tempestade se aproximando, o barulho de
+                            uma cidade agitada ou o silêncio de uma floresta à noite, o som transporta o público para o
+                            cenário da peça.
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-music text-custom-purple me-2"></i>
+                            <strong>Ditar o Ritmo:</strong> A música e os efeitos sonoros ajudam a guiar o ritmo da
+                            cena, acelerando a tensão, desacelerando para momentos de reflexão ou pontuando uma piada.
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-comment-dots text-custom-purple me-2"></i>
+                            <strong>Amplificar a Emoção:</strong> Uma trilha sonora bem escolhida pode intensificar a
+                            alegria, o medo, a tristeza ou o suspense, conectando o público à história em um nível mais
+                            profundo.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3 class="text-custom-purple">As Ferramentas da Mágica</h3>
+                    <p>
+                        O trabalho do sonoplasta é uma mistura de técnica e criatividade. As ferramentas incluem:
+                    </p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <i class="fas fa-headphones text-custom-purple me-2"></i>
+                            <strong>Trilhas Sonoras:</strong> Músicas que criam o ambiente ou marcam a transição entre
+                            as cenas.
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-wind text-custom-purple me-2"></i>
+                            <strong>Efeitos Especiais (Foley):</strong> Sons que imitam ações em cena, como passos, o
+                            tilintar de uma xícara ou o abrir de uma porta.
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-microphone text-custom-purple me-2"></i>
+                            <strong>Microfones e Equipamentos:</strong> Responsáveis pela clareza das falas dos atores,
+                            garantindo que cada palavra seja ouvida, mesmo nas últimas fileiras.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3 class="text-custom-purple">O Processo Criativo</h3>
+                    <p>
+                        A sonoplastia começa com a leitura do roteiro, onde o profissional de som decide quais efeitos e
+                        músicas são necessários para complementar a história. Depois, vem a fase de gravação e mixagem,
+                        onde cada som é ajustado para se encaixar perfeitamente na cena. Durante a peça, o sonoplasta
+                        opera os efeitos em tempo real, como um maestro de sons, garantindo que tudo ocorra no momento
+                        certo, criando uma experiência imersiva para o público.
+                    </p>
+                </div>
+
+                <hr class="section-divider">
+
+                <section class="mb-5">
+                    <h2 class="text-custom-purple text-center mb-4">Conheça Nossa Equipe de Sonoplastia</h2>
+                    <p class="text-center lead">Conheça os artistas que criam a trilha sonora e os efeitos especiais dos nossos espetáculos.</p>
+                    <div class="row g-4 justify-content-center">
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="team-member-card">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXcyS11u5YFyTJc0cD2aB2nOlSPb-DP0jTBw&s"
+                                    alt="Foto do integrante">
+                                <h5 class="text-custom-purple mb-0">Nome</h5>
+                                <p class="text-muted">Sonoplasta Principal</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="team-member-card">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXcyS11u5YFyTJc0cD2aB2nOlSPb-DP0jTBw&s"
+                                    alt="Foto do integrante">
+                                <h5 class="text-custom-purple mb-0">Nome</h5>
+                                <p class="text-muted">Editora de Áudio</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="team-member-card">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXcyS11u5YFyTJc0cD2aB2nOlSPb-DP0jTBw&s"
+                                    alt="Foto do integrante">
+                                <h5 class="text-custom-purple mb-0">Nome</h5>
+                                <p class="text-muted">Técnico de Som</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <footer id="contato" class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>Siga-nos nas redes sociais e entre em contato para mais informações.</p>
+            <div class="d-flex justify-content-center gap-3 mb-3">
+                <a href="https://www.instagram.com/" class="text-white"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.tiktok.com/" class="text-white"><i class="fa-brands fa-tiktok fa-2x"></i></a>
+                <a href="https://www.youtube.com/" class="text-white"><i class="fab fa-youtube fa-2x"></i></a>
+            </div>
+            <p>Email: <a href="mailto:contato@teatroif.com"
+                    class="text-white text-decoration-none">contato@teatroif.com</a></p>
+            <p>&copy; 2025 Projeto de Teatro IF. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

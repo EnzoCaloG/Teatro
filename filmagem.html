@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe de Filmagem - IF</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Estilos personalizados */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand img {
+            max-height: 40px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+            color: #4a148c;
+        }
+
+        .text-custom-purple {
+            color: #4a148c;
+        }
+
+        .btn-custom-purple {
+            background-color: #4a148c;
+            border-color: #4a148c;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom-purple:hover {
+            background-color: #6a1b9a;
+            border-color: #6a1b9a;
+        }
+
+        .header-banner {
+            height: 350px;
+            background-image: url('https://images.pexels.com/photos/1036329/pexels-photo-1036329.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            position: relative;
+        }
+
+        .header-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .header-banner h1 {
+            z-index: 1;
+            color: white;
+            font-size: 3.5rem;
+            text-align: center;
+        }
+
+        .process-step h5 {
+            font-size: 1.5rem;
+            color: #4a148c;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .card {
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        /* Estilos para a nova seção de perfis */
+        .profile-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-card img {
+            width: 150px;
+            /* Tamanho da imagem redonda */
+            height: 150px;
+            border-radius: 50%;
+            /* Faz a imagem ficar redonda */
+            object-fit: cover;
+            border: 4px solid #4a148c;
+            margin-bottom: 15px;
+        }
+
+        .profile-card h5 {
+            margin-bottom: 5px;
+            color: #4a148c;
+        }
+
+        .profile-card p {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://integra.ifsp.edu.br/img/logos/ifsp/logo-instituto-horizontal-branco.png"
+                    alt="Logo de Teatro">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html"><i class="fas fa-info-circle me-1"></i> Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#pecas"><i class="fas fa-theater-masks me-1"></i> Peças</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="roteiro.html"><i class="fas fa-user-friends me-1"></i> Roteiro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cenarioAndFigurino.html"><i class="fas fa-camera-retro me-1"></i>
+                            Cenário e Figurino</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sonoplastia.html"><i class="fas fa-code me-1"></i> Sonoplastia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="filmagem.html"><i class="fas fa-headphones me-1"></i>
+                            Filmagem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="elenco.html"><i class="fas fa-palette me-1"></i> Elenco</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="equipeWeb.html"><i
+                                class="fas fa-pen-nib me-1"></i> Equipe Web</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato"><i class="fas fa-envelope me-1"></i> Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-banner">
+        <h1>O Processo Criativo da Equipe de Filmagem</h1>
+    </div>
+
+    <main class="container my-5">
+        <section class="text-center mb-5">
+            <h2 class="text-custom-purple display-6 fw-bold">A Força Vital por Trás das Câmeras</h2>
+            <p class="lead">Nossa equipe de filmagem é a força vital por trás das câmeras, transformando roteiros em
+                imagens dinâmicas e narrativas visuais. Nosso trabalho é um balé cuidadosamente coreografado de
+                criatividade e técnica, dividido em três fases essenciais.</p>
+        </section>
+
+        <section id="pre-producao" class="mb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h3 class="text-custom-purple mb-4">1. A Pré-Produção: O Rascunho da Realidade</h3>
+                    <p>
+                        Antes mesmo de as câmeras serem ligadas, o trabalho pesado de planejamento começa. É aqui que o
+                        roteiro ganha vida através de um olhar cinematográfico.
+                    </p>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item">
+                            <i class="fas fa-file-alt text-custom-purple me-2"></i> <strong>Análise do Roteiro:</strong>
+                            Lemos e entendemos a história, identificando as necessidades de cada cena. Analisamos a
+                            iluminação, os movimentos de câmera, e o que é necessário para capturar a emoção e o tom da
+                            história.
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-palette text-custom-purple me-2"></i> <strong>Decupagem e
+                                Storyboard:</strong> Desenhamos cada cena, criando um storyboard que serve como um guia
+                            visual. A decupagem detalha os enquadramentos, a ordem das tomadas e os ângulos de câmera,
+                            garantindo que o diretor e o diretor de fotografia estejam em sintonia.
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-camera-retro text-custom-purple me-2"></i> <strong>Escolha de
+                                Equipamentos:</strong> Selecionamos as câmeras, lentes, iluminação e equipamentos de
+                            movimento (como drones, gimbals e dollies) mais adequados para a estética desejada. A
+                            escolha certa é crucial para traduzir a visão do roteiro para a tela.
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-tasks text-custom-purple me-2"></i> <strong>Logística:</strong> Planejamos
+                            a logística de cada filmagem, incluindo o cronograma, a equipe técnica e os requisitos de
+                            segurança, assegurando que tudo esteja no lugar e pronto para o dia da gravação.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="producao" class="mb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h3 class="text-custom-purple mb-4">2. A Produção: A Mágica Acontece</h3>
+                    <p>
+                        Com tudo planejado, é hora de entrar em ação. A produção é onde a teoria se encontra com a
+                        prática, e a equipe de filmagem se move como uma engrenagem única e bem-ajustada.
+                    </p>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item">
+                            <i class="fas fa-cogs text-custom-purple me-2"></i> <strong>Montagem de Set:</strong> Nossos
+                            técnicos montam os equipamentos, posicionam as câmeras e preparam a iluminação de acordo com
+                            o plano de pré-produção. Cada cabo e luz é colocado com precisão para criar a atmosfera
+                            perfeita.
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-play-circle text-custom-purple me-2"></i> <strong>Ensaio e
+                                Gravação:</strong> Trabalhamos em estreita colaboração com o elenco e a direção. O
+                            ensaio é fundamental para aperfeiçoar o movimento da câmera e dos atores, garantindo que a
+                            tomada final seja impecável. Depois, é hora de "ação!" e a captura da cena.
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-question-circle text-custom-purple me-2"></i> <strong>Resolução de
+                                Problemas:</strong> A filmagem é imprevisível. Problemas de iluminação, ruído, ou
+                            mudanças no roteiro são comuns. Nossa equipe é treinada para pensar rapidamente e encontrar
+                            soluções criativas no local, mantendo o projeto no trilho.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="pos-producao" class="mb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h3 class="text-custom-purple mb-4">3. A Pós-Produção: A Finalização da Obra</h3>
+                    <p>
+                        Quando as gravações terminam, a nossa parte do trabalho continua. Entregamos o material bruto
+                        para a equipe de edição, mas a qualidade do que entregamos é crucial.
+                    </p>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item">
+                            <i class="fas fa-folder-open text-custom-purple me-2"></i> <strong>Organização de
+                                Material:</strong> Organizamos e fazemos o backup de todo o material gravado, garantindo
+                            que cada tomada esteja nomeada e catalogada de forma clara. A organização é chave para o
+                            processo de edição.
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-hdd text-custom-purple me-2"></i> <strong>Backup e Segurança:</strong> A
+                            segurança dos arquivos é nossa prioridade. Todos os arquivos são copiados para diversos HDs
+                            e servidores, protegendo o trabalho arduamente realizado de qualquer perda acidental.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="participantes-filmagem" class="container my-5">
+        <h2 class="text-center text-custom-purple mb-5">Equipe de Filmagem: Nossos Talentos</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="profile-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQybK-6etRratIEYtZ2m0kSCKhv2MqQre6tig&s"
+                        alt="Foto do integrante" class="img-fluid">
+                    <h5>Nome</h5>
+                    <p>Função: Diretor de Fotografia</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="profile-card">
+                    <img src="data:image/jpeg;base64,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"
+                        alt="Foto do integrante" class="img-fluid">
+                    <h5>Nome</h5>
+                    <p>Função: Operador de Câmera</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="profile-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3McCSKzC7m88yNdYhUV2d4oCwKgslrNCM-A&s"
+                        alt="Foto do integrante" class="img-fluid">
+                    <h5>Nome</h5>
+                    <p>Função: Assistente de Câmera</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="profile-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXcyS11u5YFyTJc0cD2aB2nOlSPb-DP0jTBw&s"
+                        alt="Foto do integrante" class="img-fluid">
+                    <h5>Nome</h5>
+                    <p>Função: Técnico de Som</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="disponibilizacao-videos" class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h2 class="text-custom-purple mb-4">Do Set de Filmagem para Você: O Resultado Final</h2>
+                <p class="lead">Depois de muito trabalho de gravação e edição, o material está pronto! Acreditamos que a
+                    arte deve ser compartilhada, por isso, nos dedicamos a disponibilizar os vídeos do nosso projeto
+                    para que todos possam ver e se emocionar com as nossas histórias. Nosso objetivo é levar o resultado
+                    do nosso esforço e paixão diretamente até você, em qualquer lugar.</p>
+                <div class="mt-4">
+                    <a href="https://www.youtube.com/@SeuCanalDoYoutube" class="btn btn-custom-purple btn-lg"
+                        target="_blank">
+                        <i class="fab fa-youtube me-2"></i> Assista aos Nossos Vídeos!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="contato" class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>Siga-nos nas redes sociais e entre em contato para mais informações.</p>
+            <div class="d-flex justify-content-center gap-3 mb-3">
+                <a href="https://www.instagram.com/" class="text-white"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.tiktok.com/" class="text-white"><i class="fa-brands fa-tiktok fa-2x"></i></a>
+                <a href="https://www.youtube.com/" class="text-white"><i class="fab fa-youtube fa-2x"></i></a>
+            </div>
+            <p>Email: <a href="mailto:contato@teatroif.com"
+                    class="text-white text-decoration-none">contato@teatroif.com</a></p>
+            <p>&copy; 2025 Projeto de Teatro IF. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

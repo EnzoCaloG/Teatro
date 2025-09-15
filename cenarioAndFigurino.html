@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cenário e Figurino - Teatro IF</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand img {
+            max-height: 40px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+            color: #4a148c;
+        }
+
+        .text-custom-purple {
+            color: #4a148c;
+        }
+
+        .header-banner {
+            height: 350px;
+            background-image: url('https://images.pexels.com/photos/1036329/pexels-photo-1036329.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            position: relative;
+        }
+
+        .header-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .header-banner h1 {
+            z-index: 1;
+            color: white;
+            font-size: 3.5rem;
+            text-align: center;
+        }
+
+        .content-section {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .team-member-card {
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .team-member-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #6a1b9a;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-divider {
+            border-top: 3px solid #6a1b9a;
+            width: 80%;
+            margin: 60px auto;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://integra.ifsp.edu.br/img/logos/ifsp/logo-instituto-horizontal-branco.png"
+                    alt="Logo de Teatro">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html"><i class="fas fa-info-circle me-1"></i> Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#pecas"><i class="fas fa-theater-masks me-1"></i> Peças</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="roteiro.html"><i class="fas fa-user-friends me-1"></i> Roteiro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cenarioAndFigurino.html"><i
+                                class="fas fa-camera-retro me-1"></i> Cenário e Figurino</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sonoplastia.html"><i class="fas fa-code me-1"></i> Sonoplastia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="filmagem.html"><i class="fas fa-headphones me-1"></i> Filmagem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="elenco.html"><i class="fas fa-palette me-1"></i> Elenco</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="equipeWeb.html"><i
+                                class="fas fa-pen-nib me-1"></i> Equipe Web</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato"><i class="fas fa-envelope me-1"></i> Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-banner">
+        <h1>Cenário e Figurino: A Magia por Trás das Cortinas</h1>
+    </div>
+
+    <main class="container my-5">
+        <section class="text-center mb-5">
+            <h2 class="text-custom-purple display-6 fw-bold">O Palco e o Elenco: Contando Histórias Visuais</h2>
+            <p class="lead">O Cenário e o Figurino são a alma visual de uma peça. Conheça as etapas que dão vida ao
+                palco e aos personagens, da primeira ideia até a apresentação final.</p>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="text-custom-purple text-center mb-4">O Cenário: A Construção de Mundos</h2>
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1541334969248-c30c8227b233?q=80&w=1770&auto=format&fit=crop"
+                            class="card-img-top" alt="Rascunho de cenário">
+                        <div class="card-body">
+                            <h5 class="card-title text-custom-purple">1. Do Roteiro à Ideia</h5>
+                            <p class="card-text">O cenógrafo mergulha no roteiro para absorver a atmosfera, o período e
+                                as necessidades de cada cena. As primeiras ideias são traduzidas em rascunhos e plantas
+                                detalhadas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1620880590886-21805562d981?q=80&w=1770&auto=format&fit=crop"
+                            class="card-img-top" alt="Materiais de construção">
+                        <div class="card-body">
+                            <h5 class="card-title text-custom-purple">2. A Escolha dos Materiais</h5>
+                            <p class="card-text">Cada material é escolhido com um propósito. Madeira, metal, tintas e
+                                tecidos transformam objetos simples em elementos de cena que narram a história do palco.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1579752530188-b2207b8979c1?q=80&w=1771&auto=format&fit=crop"
+                            class="card-img-top" alt="Cenário final no palco">
+                        <div class="card-body">
+                            <h5 class="card-title text-custom-purple">3. A Confecção e a Magia</h5>
+                            <p class="card-text">A equipe de cenografia trabalha incansavelmente para construir e pintar
+                                cada peça. A confecção é a etapa mais manual, onde o plano do papel se torna uma
+                                realidade tridimensional.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1518931109405-244e45d19992?q=80&w=1770&auto=format&fit=crop"
+                            class="card-img-top" alt="Iluminação de teatro">
+                        <div class="card-body">
+                            <h5 class="card-title text-custom-purple">4. Iluminação e Efeitos</h5>
+                            <p class="card-text">A iluminação é parte do cenário, criando a atmosfera, o tempo e o clima
+                                da cena. As cores e a intensidade da luz moldam a percepção do público e destacam
+                                elementos-chave.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1533157793540-08d447d2d3a9?q=80&w=1770&auto=format&fit=crop"
+                            class="card-img-top" alt="Ajustes finais no palco">
+                        <div class="card-body">
+                            <h5 class="card-title text-custom-purple">5. O Ensaio Geral</h5>
+                            <p class="card-text">Nos dias que antecedem a estreia, a equipe de cenografia faz os ajustes
+                                finais. Cada objeto é testado e posicionado, e os efeitos são sincronizados para
+                                garantir que tudo funcione perfeitamente.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1616408224522-83569e46a58f?q=80&w=1770&auto=format&fit=crop"
+                            class="card-img-top" alt="Perspectiva no cenário">
+                        <div class="card-body">
+                            <h5 class="card-title text-custom-purple">6. A Importância da Perspectiva</h5>
+                            <p class="card-text">Os cenógrafos utilizam a perspectiva para criar ilusões de profundidade
+                                e distância. Essa técnica faz com que o palco pareça maior, mais profundo ou mais
+                                íntimo, de acordo com a necessidade da cena.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="mb-5">
+            <h2 class="text-custom-purple text-center mb-4">O Figurino: Vestindo a Essência</h2>
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1627954502575-b6d812691f9b?q=80&w=1770&auto=format&fit=crop"
+                            class="card-img-top" alt="Desenhos de figurino">
+                        <div class="card-body">
+                            <h5 class="card-title text-custom-purple">1. O Estudo do Personagem</h5>
+                            <p class="card-text">O figurinista analisa a personalidade, a história e o contexto social
+                                de cada personagem. Ele pensa em como a roupa pode refletir emoções, status e o que a
+                                persona representa.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1549488346-63309a6915f0?q=80&w=1770&auto=format&fit=crop"
+                            class="card-img-top" alt="Confecção de figurino">
+                        <div class="card-body">
+                            <h5 class="card-title text-custom-purple">2. A Caça às Roupas</h5>
+                            <p class="card-text">Em vez de criar do zero, o figurinista embarca em uma verdadeira "caça
+                                ao tesouro". Ele busca roupas prontas em brechós, lojas de departamento e acervos,
+                                procurando as peças que se encaixam na visão criativa.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1549488346-63309a6915f0?q=80&w=1770&auto=format&fit=crop"
+                            class="card-img-top" alt="Figurinos prontos">
+                        <div class="card-body">
+                            <h5 class="card-title text-custom-purple">3. Adaptação e Transformação</h5>
+                            <p class="card-text">Com as peças em mãos, o trabalho de transformação começa. As roupas são
+                                cortadas, tingidas, costuradas e modificadas para que se tornem únicas e totalmente
+                                alinhadas com a essência do personagem e da cena.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1528659516609-b425515714f3?q=80&w=1770&auto=format&fit=crop"
+                            class="card-img-top" alt="Ator fazendo prova de figurino">
+                        <div class="card-body">
+                            <h5 class="card-title text-custom-purple">4. Provas e Ajustes</h5>
+                            <p class="card-text">Para que o figurino seja perfeito, são realizadas provas com os atores.
+                                Nessa etapa, ajustes finos são feitos para garantir conforto e mobilidade, permitindo
+                                que o ator se mova livremente.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1579752530188-b2207b8979c1?q=80&w=1771&auto=format&fit=crop"
+                            class="card-img-top" alt="Acessórios de figurino">
+                        <div class="card-body">
+                            <h5 class="card-title text-custom-purple">5. Detalhes e Adereços</h5>
+                            <p class="card-text">Nenhum figurino está completo sem seus acessórios. Botões, joias,
+                                chapéus e luvas são os pequenos detalhes que finalizam o visual e reforçam a
+                                personalidade do personagem em cena.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1574635582315-052a65f573f4?q=80&w=1770&auto=format&fit=crop"
+                            class="card-img-top" alt="Paleta de cores de figurino">
+                        <div class="card-body">
+                            <h5 class="card-title text-custom-purple">6. A Psicologia das Cores</h5>
+                            <p class="card-text">A escolha das cores não é aleatória. O figurinista utiliza a psicologia
+                                das cores para evocar sentimentos no público e refletir o estado emocional do
+                                personagem, como o vermelho para paixão e o azul para serenidade.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="text-custom-purple text-center mb-4">Conheça Nossa Equipe de Criação</h2>
+            <p class="text-center lead">Esses são os talentos que dão vida aos nossos mundos e personagens no palco.</p>
+            <div class="row g-4 justify-content-center">
+
+                <h3 class="text-center mt-4">Cenografia</h3>
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-member-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3McCSKzC7m88yNdYhUV2d4oCwKgslrNCM-A&s"
+                            alt="Foto do integrante">
+                        <h5 class="text-custom-purple mb-0">Nome</h5>
+                        <p class="text-muted">Cenógrafo Principal</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-member-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3McCSKzC7m88yNdYhUV2d4oCwKgslrNCM-A&s"
+                            alt="Foto do integrante">
+                        <h5 class="text-custom-purple mb-0">Nome</h5>
+                        <p class="text-muted">Assistente de Cenografia</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-member-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3McCSKzC7m88yNdYhUV2d4oCwKgslrNCM-A&s"
+                            alt="Foto do integrante">
+                        <h5 class="text-custom-purple mb-0">Nome</h5>
+                        <p class="text-muted">Efeitos de Iluminação</p>
+                    </div>
+                </div>
+
+                <h3 class="text-center mt-4">Figurino</h3>
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-member-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3McCSKzC7m88yNdYhUV2d4oCwKgslrNCM-A&s"
+                            alt="Foto do integrante">
+                        <h5 class="text-custom-purple mb-0">Nome</h5>
+                        <p class="text-muted">Figurinista Principal</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-member-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3McCSKzC7m88yNdYhUV2d4oCwKgslrNCM-A&s"
+                            alt="Foto do integrante">
+                        <h5 class="text-custom-purple mb-0">Nome</h5>
+                        <p class="text-muted">Assistente de Figurino</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-member-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3McCSKzC7m88yNdYhUV2d4oCwKgslrNCM-A&s"
+                            alt="Foto do integrante">
+                        <h5 class="text-custom-purple mb-0">Nome</h5>
+                        <p class="text-muted">Adereços e Detalhes</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato" class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>Siga-nos nas redes sociais e entre em contato para mais informações.</p>
+            <div class="d-flex justify-content-center gap-3 mb-3">
+                <a href="https://www.instagram.com/" class="text-white"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.tiktok.com/" class="text-white"><i class="fa-brands fa-tiktok fa-2x"></i></a>
+                <a href="https://www.youtube.com/" class="text-white"><i class="fab fa-youtube fa-2x"></i></a>
+            </div>
+            <p>Email: <a href="mailto:contato@teatroif.com"
+                    class="text-white text-decoration-none">contato@teatroif.com</a></p>
+            <p>&copy; 2025 Projeto de Teatro IF. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
